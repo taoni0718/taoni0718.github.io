@@ -1,0 +1,7 @@
+@inproceedings{duan2024f2key,
+  title={F2Key: Dynamically Converting Your Face into a Private Key Based on COTS Headphones for Reliable Voice Interaction},
+  author={Duan, Di and Sun, Zehua and Ni, Tao and Li, Shuaicheng and Jia, Xiaohua and Xu, Weitao and Li, Tianxing},
+  booktitle={Proceedings of the 22nd Annual International Conference on Mobile Systems, Applications and Services},
+  pages={127--140},
+  year={2024}
+}

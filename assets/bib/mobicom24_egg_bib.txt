@@ -1,0 +1,7 @@
+@inproceedings{sun2024rf,
+  title={RF-Egg: An RF Solution for Fine-Grained Multi-Target and Multi-Task Egg Incubation Sensing},
+  author={Sun, Zehua and Ni, Tao and Chen, Yongliang and Duan, Di and Liu, Kai and Xu, Weitao},
+  booktitle={Proceedings of the 30th Annual International Conference on Mobile Computing and Networking},
+  pages={528--542},
+  year={2024}
+}
