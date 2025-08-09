@@ -1,7 +1,0 @@
-@inproceedings{ni2024rehsense,
-  title={REHSense: Towards Battery-Free Wireless Sensing via Radio Frequency Energy Harvesting},
-  author={Ni, Tao and Sun, Zehua and Han, Mingda and Xie, Yaxiong and Lan, Guohao and Li, Zhenjiang and Gu, Tao and Xu, Weitao},
-  booktitle={Proceedings of the Twenty-fifth International Symposium on Theory, Algorithmic Foundations, and Protocol Design for Mobile Networks and Mobile Computing},
-  pages={211--220},
-  year={2024}
-}

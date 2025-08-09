@@ -1,7 +1,0 @@
-@article{sun2024flora+,
-  title={FLoRa+: Energy-Efficient, Reliable, Beamforming-Assisted, and Secure Over-The-Air Firmware Update in LoRa Networks},
-  author={Sun, Zehua and Ni, Tao and Yang, Huanqi and Liu, Kai and Zhang, Yu and Gu, Tao and Xu, Weitao},
-  journal={ACM Transactions on Sensor Networks},
-  year={2024},
-  publisher={ACM New York, NY}
-}
