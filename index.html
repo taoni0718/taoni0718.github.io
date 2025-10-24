@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="./taoni_files/coai_logo.png">
     
 	<link href="./taoni_files/bootstrap.css" rel="stylesheet" media="screen">
-	<link href="./taoni_files/non-responsive.css" rel="stylesheet">
+	<!-- <link href="./taoni_files/non-responsive.css" rel="stylesheet"> -->
     
 <style type="text/css">
   body {
@@ -36,6 +36,55 @@
 #small-caps {
   font-variant-caps: small-caps;
 } 
+
+</style>
+
+<style>
+
+/* ===== Responsive enablement while preserving original desktop width =====
+   - We remove 'non-responsive.css' and keep Bootstrap responsive features.
+   - We lock container width at 970px on >=992px and >=1200px to match the old narrow look.
+   - On phones, content stacks and fills the screen.
+*/
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+/* Keep Bootstrap's 750px width at >=768px (default), then pin to 970px for md and lg */
+@media (min-width: 768px){ .container { width: 700px !important; } }
+@media (min-width: 992px){ .container { width: 920px !important; } }
+/* Prevent Bootstrap from expanding to 1170px on very large screens */
+@media (min-width: 1200px){ .container { width: 920px !important; } }
+
+/* Make images flexible */
+img { max-width: 100%; height: auto; }
+
+/* Navbar brand logo scale on small devices */
+@media (max-width: 767px){
+  .navbar-brand img { height: 24px !important; }
+}
+
+/* Borders: avoid awkward vertical rules when stacked on phones */
+@media (max-width: 767px){
+  .border-left { border-left: none !important; }
+  .border-right { border-right: none !important; }
+}
+
+/* Avoid horizontal scroll due to long words/links */
+.container, .bs-component, p, li {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Optional: nicer spacing for single-column layout on phones */
+@media (max-width: 767px){
+  .row + .row { margin-top: 15px; }
+}
+
+/* Navbar brand logo adaptive sizing (added) */
+.navbar-brand img { height: auto !important; width: auto !important; max-height: 30px; max-width: 100%; }
+@media (max-width: 767px){
+  .navbar-brand img { max-height: 22px !important; }
+}
 
 </style>
  
@@ -75,7 +124,7 @@
   <div class="bs-docs-section">
 	<div class="row">
 
-    <div class="col-xs-3">
+    <div class="col-md-3 col-xs-12">
      	<div class="bs-component">
       <h3></h3>
       
@@ -249,7 +298,7 @@
     </div>    
     
 
-    <div class="col-xs-9  border-left">
+    <div class="col-md-9 col-xs-12 border-left">
         <div class="bs-component">
 
   
