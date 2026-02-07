@@ -37,6 +37,37 @@
   font-variant-caps: small-caps;
 } 
 
+.profile-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:1px solid #d0d7de;
+  color:#1f2328;
+  text-decoration:none;
+  background:#fff;
+  transition:all .2s ease;
+}
+
+.profile-icon:hover{
+  background:#f6f8fa;
+  transform:translateY(-1px);
+  border-color:#b8c0c8;
+}
+
+.profile-icon iconify-icon{
+  font-size:20px;
+}
+
+
 </style>
 
 <style>
@@ -139,22 +170,60 @@ img { max-width: 100%; height: auto; }
         <p>Office: Building 4, 3237</p>
         <p align="left">
           <!-- Primary or Warning -->
-
+<!-- 
         <a href="https://scholar.google.com/citations?user=keLkPuMAAAAJ&hl=en" class="btn btn-primary btn-xs">Google Scholar</a>
-        <a href="https://dblp.org/pid/50/4043-3.html" class="btn btn-primary btn-xs">DBLP</a>
+        <a href="https://dblp.org/pid/50/4043-3.html" class="btn btn-primary btn-xs">DBLP</a> -->
+        <!-- 1) Load Iconify once (for Google Scholar + DBLP icons) -->
+        <script src="./taoni_files/iconify-icon.min.js" defer></script>
+
+        <!-- 2) Your links -->
+        <div class="profile-icons">
+          <a href="https://scholar.google.com/citations?user=keLkPuMAAAAJ&hl=en"
+             class="profile-icon"
+             target="_blank" rel="noopener"
+             aria-label="Google Scholar" title="Google Scholar">
+            <iconify-icon icon="simple-icons:googlescholar"></iconify-icon>
+          </a>
+
+          <a href="https://dblp.org/pid/50/4043-3.html"
+             class="profile-icon"
+             target="_blank" rel="noopener"
+             aria-label="DBLP" title="DBLP">
+            <iconify-icon icon="simple-icons:dblp"></iconify-icon>
+          </a>
+
+          <a href="https://www.linkedin.com/in/tao-ni/"
+             class="profile-icon"
+             target="_blank" rel="noopener"
+             aria-label="LinkedIn" title="LinkedIn">
+            <iconify-icon icon="simple-icons:linkedin"></iconify-icon>
+          </a>
+        </div>
+
+
 
          </p>
       
          
         <div class="bs-component">
-          <h3>News</h3>
+          <h3>Teaching</h3>
 
-          <div style="height: 680px; overflow: auto;">
+          <div style="height: 300px; overflow: auto;">
+
+          <p><img src="./taoni_files/education.png" width="10">
+            <strong>Spring 2026</strong><br>
+            CS221P Network Security: MEng Cybersecurity, Minister of Interior (MoI), Saudi Arabia.
+          </p>
 
           <!-- <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>December, 2025:</strong><br>
-            One paper was accepted by USENIX Security'26.
-          </p> -->
+            <strong>January, 2026:</strong><br>
+            I am excited to be selected as the Distinguished Reviewer Board of ACM Transactions on Sensor Networks (TOSN).
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>January, 2026:</strong><br>
+            I will serve on the program committee of EAI MobiQuitous'26.
+          </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
             <strong>December, 2025:</strong><br>
@@ -311,7 +380,7 @@ img { max-width: 100%; height: auto; }
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
             <strong>July, 2022:</strong><br>
             One paper was accepted by UbiComp'22.
-          </p>
+          </p> -->
 
           <br>
           
@@ -334,7 +403,9 @@ img { max-width: 100%; height: auto; }
 
 <br>  <br>
 
-<strong> <u>Research Interests.</u></strong> My research lies in the cross-discipline of cybersecurity, IoT, and AI, with a primary focus on <i>Building Secure, Reliable and Efficient Cyber-Physical Systems (CPS)</i> to achieve trustworthy computing and confidential sensing in critical cyber-infrastructures. My current research interests include: (1) CPS security (e.g., AIoT, eXtended Reality (XR), and autonomous driving), (2) Machine learning systems (MLSys) security (e.g., backdoor/adversarial attacks, on-device AI), and (3) Battery-free CPS-IoT in mobile computing.
+<!-- <strong> <u>Research Interests.</u></strong> My research lies in the cross-discipline of cybersecurity, IoT, and AI, with a primary focus on <i>Building Secure, Reliable and Efficient Cyber-Physical Systems (CPS)</i> to achieve trustworthy computing and confidential sensing in critical cyber-infrastructures. My current research interests include: (1) CPS security (e.g., AIoT, eXtended Reality (XR), and autonomous driving), (2) Machine learning systems (MLSys) security (e.g., backdoor/adversarial attacks, on-device AI), and (3) Battery-free CPS-IoT in mobile computing. -->
+
+<strong> <u>Research Interests.</u></strong> My research lies in the cross-discipline of cybersecurity and AI, with a primary focus on <i>Building Secure, Reliable and Efficient AI-driven Systems</i> to achieve trustworthy computing and confidential sensing in critical cyber-infrastructures. My current research interests include: (1) AI safety and AI for security (e.g., adversarial/backdoor in DNNs, LLM security and privacy, embodied AI), (2) System Security (e.g., AIoT, eXtended Reality (XR), and robotics security), and (3) Low-power and battery-free IoT in mobile computing.
 
 <br />
 
@@ -352,7 +423,186 @@ img { max-width: 100%; height: auto; }
 
         <div class="bs-component">
 
-        <h3>Selected Publications (<a href="./publications.html">Full List</a>)</h3>
+
+                  <h3>News</h3>
+
+          <div style="height: 300px; overflow: auto;">
+
+          <!-- <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>December, 2025:</strong><br>
+            One paper was accepted by USENIX Security'26.
+          </p> -->
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(January, 2026)</strong>
+            I am excited to be selected as the Distinguished Reviewer Board of ACM Transactions on Sensor Networks (<a href="https://dl.acm.org/journal/tosn">TOSN</a>).
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(January, 2026)</strong>
+            I will serve on the program committee of EAI MobiQuitous'26.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(December, 2025)</strong>
+            One paper was accepted by USENIX Security'26.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(November, 2025)</strong>
+            Two papers were accepted by IEEE TDSC.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(October, 2025)</strong>
+            I'm glad to join the Editorial Board of IEEE Transactions on Services Computing (<a href="https://www.computer.org/csdl/journal/sc">TSC</a>) as an Associate Editor.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(October, 2025)</strong>
+            I will serve on the program committee of ACM MobiSys'26.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(October, 2025)</strong>
+            I officially joined KAUST as an Assistant Professor in Computer Science. Students are welcome to reach out via email or visit my office.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(August, 2025)</strong>
+            I will serve on the program committee of USENIX Security'26.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(August, 2025)</strong>
+            I won the Best Presentation Award at Rising Star Forum of AIoTSys'25.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(July, 2025)</strong>
+            I am excited to be selected as an AIoTSys Rising Star.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(July, 2025)</strong>
+            I am excited to receive the <a href="https://scholars.cityu.edu.hk/en/persons/taoni2/prizes/">Outstanding Research Thesis Award</a> from CityUHK.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(July, 2025)</strong>
+            One paper was accepted by ACM UIST'25.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(July, 2025)</strong>
+            One extension paper was accepted by IEEE TMC.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(June, 2025)</strong>
+            One paper was accepted by MobiCom'25.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(May, 2025)</strong>
+            One paper was accepted by ICML'25.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(April, 2025)</strong>
+            I will serve on the technical program committee of NDSS'26.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(November, 2024)</strong>
+            Our first XR security paper, <span id="small-caps">VRecKey</span>, was accepted by NDSS'25.
+          </p>
+
+           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(September, 2024)</strong>
+            Invited to join the Youth Editorial Board of <a href="https://www.sciencedirect.com/journal/journal-of-information-and-intelligence">Journal of Information and Intelligence</a>.
+          </p>
+
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(September, 2024)</strong>
+            Our CCS'23 paper was awarded <a href="https://cybersecurity.springeropen.com/award-2024">Cybersecurity Best Practical Paper Award</a> 2024.</a>
+          </p>
+
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(August, 2024)</strong>
+            Our battery-free wireless sensing paper, <span id="small-caps">REHSense</span>, was accepted by MobiHoc'24.
+          </p>
+
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(June, 2024)</strong>
+            Our poster wins the People's Choice ASSET Poster Award in <a href="https://www.sigmobile.org/mobisys/2024/asset.html">SIGMOBILE Asian Student Symposium on Emerging Technologies (ASSET)</a>, Co-located with MobiSys'24 in Tokyo, Japan.
+          </p>
+
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(May, 2024)</strong>
+            Invited to join the Youth Editorial Board of <a href="https://cybersecurity.springeropen.com">Journal of Cybersecurity</a>.
+          </p>
+
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(April, 2024)</strong>
+            I was selected as an ACM MobiSys Rising Star 2024.
+          </p>
+
+        <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(March, 2024)</strong>
+            I successfully defended my thesis and completed my Ph.D. degree!
+          </p>
+
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(March, 2024)</strong>
+            One paper was accepted by MobiSys'24.
+          </p>
+
+ 
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(February, 2024)</strong>
+            One paper was accepted by MobiCom'24.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(September, 2023)</strong>
+            <span id="small-caps">FPLogger</span> was accpeted by CCS'23.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(August, 2023)</strong>
+            <span id="small-caps">BankSnoop</span> and <span id="small-caps">XPorter</span> were accepted by MobiCom'23.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(January, 2023)</strong>
+            One paper was accepted by IPSN'23.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(December, 2022)</strong>
+            <span id="small-caps">WISERS</span> was accepted by IEEE S&P'23.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(July, 2022)</strong>
+            <span id="small-caps">AppListener</span> was accepted by USENIX Security'23.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(July, 2022)</strong>
+            One paper was accepted by UbiComp'22.
+          </p>
+
+          <br>
+
+        <!-- <h3>Selected Publications (<a href="./publications.html">Full List</a>)</h3>
       <br>
         <ul reversed="">
 
@@ -418,16 +668,18 @@ img { max-width: 100%; height: auto; }
             </p>
           </li>
       </ul>
-
+ -->
      </div>
      </div>
      </div>
  	 </div>
 <hr>
+
 <footer>
   <div class="row">
     <div class="col-lg-12">
-      <p class="text-muted">copyright © <em>Tao Ni</em> · css design: Thomas Park. 2024/2025</p>
+      <br><br><br>
+      <p class="text-muted">Copyright © <em>Tao Ni</em> · css design: Thomas Park. 2025/2026</p>
     </div>
     <!-- <div class="col-xs-3">
       <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=0eIipPrgEukcQh5CDAASyrSKclIgemx1Qbn02Zj8SQg&cl=ffffff&w=a"></script>
