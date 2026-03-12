@@ -117,6 +117,36 @@ img { max-width: 100%; height: auto; }
   .navbar-brand img { max-height: 22px !important; }
 }
 
+.news-container {
+  height: 280px;
+  overflow: auto;
+}
+
+.news-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.news-icon {
+  width: 10px;
+  margin-right: 8px;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.news-date {
+  width: 80px;   /* 固定日期宽度，保证正文完全对齐 */
+  font-weight: bold;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.news-text {
+  flex: 1;
+}
+
 </style>
  
 </head><body data-new-gr-c-s-check-loaded="14.1232.0" data-gr-ext-installed="" style="">
@@ -434,118 +464,399 @@ img { max-width: 100%; height: auto; }
 
                   <h3>News</h3>
 
-          <div style="height: 300px; overflow: auto;">
 
-          <!-- <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>December, 2025:</strong><br>
-            One paper was accepted by USENIX Security'26.
-          </p> -->
+<!--                   <style>
+                    .news-container {
+                      height: 280px;
+                      overflow: auto;
+                    }
+
+                    .news-item {
+                      display: flex;
+                      align-items: flex-start;
+                      margin-bottom: 10px;
+                      line-height: 1.5;
+                    }
+
+                    .news-icon {
+                      width: 10px;
+                      margin-right: 8px;
+                      margin-top: 6px;
+                      flex-shrink: 0;
+                    }
+
+                    .news-date {
+                      width: 95px;   /* 固定日期宽度，保证正文完全对齐 */
+                      font-weight: bold;
+                      white-space: nowrap;
+                      flex-shrink: 0;
+                    }
+
+                    .news-text {
+                      flex: 1;
+                    }
+                  </style> -->
+
+                  <div class="news-container">
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Mar. 2026)</div>
+                      <div class="news-text">One paper was accepted by IEEE S&amp;P'26.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Mar. 2026)</div>
+                      <div class="news-text">
+                        I'm glad to share our research about adversarial attacks and defenses in MBZUAI Nexus
+                        <a href="https://ai-nexus.mbzuai.ac.ae/?panel=Security-Advances">Symposium on Security in The Age of AI</a>. Thanks for the invitation and great arrangement.
+                      </div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Jan. 2026)</div>
+                      <div class="news-text">
+                        I joined the Distinguished Reviewer Board of ACM Transactions on Sensor Networks
+                        (<a href="https://dl.acm.org/journal/tosn">TOSN</a>).
+                      </div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Jan. 2026)</div>
+                      <div class="news-text">I will serve on the program committee of EAI MobiQuitous'26.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Dec. 2025)</div>
+                      <div class="news-text">One paper was accepted by USENIX Security'26.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Nov. 2025)</div>
+                      <div class="news-text">Two papers were accepted by IEEE TDSC.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Oct. 2025)</div>
+                      <div class="news-text">
+                        I'm glad to join the Editorial Board of IEEE Transactions on Services Computing
+                        (<a href="https://www.computer.org/csdl/journal/sc">TSC</a>) as an Associate Editor.
+                      </div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Oct. 2025)</div>
+                      <div class="news-text">I will serve on the program committee of ACM MobiSys'26.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Oct. 2025)</div>
+                      <div class="news-text">
+                        I officially joined KAUST as an Assistant Professor in Computer Science. Students are welcome to reach out via email or visit my office.
+                      </div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Aug. 2025)</div>
+                      <div class="news-text">I will serve on the program committee of USENIX Security'26.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Aug. 2025)</div>
+                      <div class="news-text">I won the Best Presentation Award at Rising Star Forum of AIoTSys'25.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Jul. 2025)</div>
+                      <div class="news-text">I am excited to be selected as an AIoTSys Rising Star.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Jul. 2025)</div>
+                      <div class="news-text">
+                        I am excited to receive the
+                        <a href="https://scholars.cityu.edu.hk/en/persons/taoni2/prizes/">Outstanding Research Thesis Award</a>
+                        from CityUHK.
+                      </div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Jul. 2025)</div>
+                      <div class="news-text">One paper was accepted by ACM UIST'25.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Jul. 2025)</div>
+                      <div class="news-text">One extension paper was accepted by IEEE TMC.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Jun. 2025)</div>
+                      <div class="news-text">One paper was accepted by MobiCom'25.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(May 2025)</div>
+                      <div class="news-text">One paper was accepted by ICML'25.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Apr. 2025)</div>
+                      <div class="news-text">I will serve on the technical program committee of NDSS'26.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Nov. 2024)</div>
+                      <div class="news-text">
+                        Our first XR security paper, <span id="small-caps">VRecKey</span>, was accepted by NDSS'25.
+                      </div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Sep. 2024)</div>
+                      <div class="news-text">
+                        Invited to join the Youth Editorial Board of
+                        <a href="https://www.sciencedirect.com/journal/journal-of-information-and-intelligence">Journal of Information and Intelligence</a>.
+                      </div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Sep. 2024)</div>
+                      <div class="news-text">
+                        Our CCS'23 paper was awarded
+                        <a href="https://cybersecurity.springeropen.com/award-2024">Cybersecurity Best Practical Paper Award</a>
+                        2024.
+                      </div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Aug. 2024)</div>
+                      <div class="news-text">
+                        Our battery-free wireless sensing paper, <span id="small-caps">REHSense</span>, was accepted by MobiHoc'24.
+                      </div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Jun. 2024)</div>
+                      <div class="news-text">
+                        Our poster wins the People's Choice ASSET Poster Award in
+                        <a href="https://www.sigmobile.org/mobisys/2024/asset.html">SIGMOBILE Asian Student Symposium on Emerging Technologies (ASSET)</a>,
+                        Co-located with MobiSys'24 in Tokyo, Japan.
+                      </div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(May, 2024)</div>
+                      <div class="news-text">
+                        Invited to join the Youth Editorial Board of
+                        <a href="https://cybersecurity.springeropen.com">Journal of Cybersecurity</a>.
+                      </div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Apr. 2024)</div>
+                      <div class="news-text">I was selected as an ACM MobiSys Rising Star 2024.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Mar. 2024)</div>
+                      <div class="news-text">I successfully defended my thesis and completed my Ph.D. degree!</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Mar. 2024)</div>
+                      <div class="news-text">One paper was accepted by MobiSys'24.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Feb. 2024)</div>
+                      <div class="news-text">One paper was accepted by MobiCom'24.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Sep. 2023)</div>
+                      <div class="news-text"><span id="small-caps">FPLogger</span> was accpeted by CCS'23.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Aug. 2023)</div>
+                      <div class="news-text">
+                        <span id="small-caps">BankSnoop</span> and <span id="small-caps">XPorter</span> were accepted by MobiCom'23.
+                      </div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Jan. 2023)</div>
+                      <div class="news-text">One paper was accepted by IPSN'23.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Dec. 2022)</div>
+                      <div class="news-text"><span id="small-caps">WISERS</span> was accepted by IEEE S&amp;P'23.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Jul. 2022)</div>
+                      <div class="news-text"><span id="small-caps">AppListener</span> was accepted by USENIX Security'23.</div>
+                    </div>
+
+                    <div class="news-item">
+                      <img class="news-icon" src="./taoni_files/glyphicons-336-pushpin.png" alt="">
+                      <div class="news-date">(Jul. 2022)</div>
+                      <div class="news-text">One paper was accepted by UbiComp'22.</div>
+                    </div>
+
+                  </div>
+
+<!--           <div style="height: 280px; overflow: auto;">
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(January, 2026)</strong>
-            I am excited to be selected as the Distinguished Reviewer Board of ACM Transactions on Sensor Networks (<a href="https://dl.acm.org/journal/tosn">TOSN</a>).
+            <strong>(Mar. 2026)</strong>
+            One paper was accepted by IEEE S&P'26.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(January, 2026)</strong>
+            <strong>(Mar. 2026)</strong>
+            I'm glad to share our research about physical adversarial attacks and defenses in MBZUAI Nexus <a href="https://ai-nexus.mbzuai.ac.ae/?panel=Security-Advances">Symposium on Security in The Age of AI</a>, Abu Dhabi. Thanks for the invitation and great arrangement.
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(Jan. 2026)</strong>
+            I joined the Distinguished Reviewer Board of ACM Transactions on Sensor Networks (<a href="https://dl.acm.org/journal/tosn">TOSN</a>).
+          </p>
+
+          <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
+            <strong>(Jan. 2026)</strong>
             I will serve on the program committee of EAI MobiQuitous'26.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(December, 2025)</strong>
+            <strong>(Dec. 2025)</strong>
             One paper was accepted by USENIX Security'26.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(November, 2025)</strong>
+            <strong>(Nov. 2025)</strong>
             Two papers were accepted by IEEE TDSC.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(October, 2025)</strong>
+            <strong>(Oct. 2025)</strong>
             I'm glad to join the Editorial Board of IEEE Transactions on Services Computing (<a href="https://www.computer.org/csdl/journal/sc">TSC</a>) as an Associate Editor.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(October, 2025)</strong>
+            <strong>(Oct. 2025)</strong>
             I will serve on the program committee of ACM MobiSys'26.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(October, 2025)</strong>
+            <strong>(Oct. 2025)</strong>
             I officially joined KAUST as an Assistant Professor in Computer Science. Students are welcome to reach out via email or visit my office.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(August, 2025)</strong>
+            <strong>(Aug. 2025)</strong>
             I will serve on the program committee of USENIX Security'26.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(August, 2025)</strong>
+            <strong>(Aug. 2025)</strong>
             I won the Best Presentation Award at Rising Star Forum of AIoTSys'25.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(July, 2025)</strong>
+            <strong>(Jul. 2025)</strong>
             I am excited to be selected as an AIoTSys Rising Star.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(July, 2025)</strong>
+            <strong>(Jul. 2025)</strong>
             I am excited to receive the <a href="https://scholars.cityu.edu.hk/en/persons/taoni2/prizes/">Outstanding Research Thesis Award</a> from CityUHK.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(July, 2025)</strong>
+            <strong>(Jul. 2025)</strong>
             One paper was accepted by ACM UIST'25.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(July, 2025)</strong>
+            <strong>(Jul. 2025)</strong>
             One extension paper was accepted by IEEE TMC.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(June, 2025)</strong>
+            <strong>(Jun. 2025)</strong>
             One paper was accepted by MobiCom'25.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(May, 2025)</strong>
+            <strong>(May 2025)</strong>
             One paper was accepted by ICML'25.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(April, 2025)</strong>
+            <strong>(Apr. 2025)</strong>
             I will serve on the technical program committee of NDSS'26.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(November, 2024)</strong>
+            <strong>(Nov. 2024)</strong>
             Our first XR security paper, <span id="small-caps">VRecKey</span>, was accepted by NDSS'25.
           </p>
 
            <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(September, 2024)</strong>
+            <strong>(Sep. 2024)</strong>
             Invited to join the Youth Editorial Board of <a href="https://www.sciencedirect.com/journal/journal-of-information-and-intelligence">Journal of Information and Intelligence</a>.
           </p>
 
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(September, 2024)</strong>
+            <strong>(Sep. 2024)</strong>
             Our CCS'23 paper was awarded <a href="https://cybersecurity.springeropen.com/award-2024">Cybersecurity Best Practical Paper Award</a> 2024.</a>
           </p>
 
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(August, 2024)</strong>
+            <strong>(Aug. 2024)</strong>
             Our battery-free wireless sensing paper, <span id="small-caps">REHSense</span>, was accepted by MobiHoc'24.
           </p>
 
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(June, 2024)</strong>
+            <strong>(Jun. 2024)</strong>
             Our poster wins the People's Choice ASSET Poster Award in <a href="https://www.sigmobile.org/mobisys/2024/asset.html">SIGMOBILE Asian Student Symposium on Emerging Technologies (ASSET)</a>, Co-located with MobiSys'24 in Tokyo, Japan.
           </p>
 
@@ -557,127 +868,59 @@ img { max-width: 100%; height: auto; }
 
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(April, 2024)</strong>
+            <strong>(Apr. 2024)</strong>
             I was selected as an ACM MobiSys Rising Star 2024.
           </p>
 
         <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(March, 2024)</strong>
+            <strong>(Mar. 2024)</strong>
             I successfully defended my thesis and completed my Ph.D. degree!
           </p>
 
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(March, 2024)</strong>
+            <strong>(Mar. 2024)</strong>
             One paper was accepted by MobiSys'24.
           </p>
 
  
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(February, 2024)</strong>
+            <strong>(Feb. 2024)</strong>
             One paper was accepted by MobiCom'24.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(September, 2023)</strong>
+            <strong>(Sep. 2023)</strong>
             <span id="small-caps">FPLogger</span> was accpeted by CCS'23.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(August, 2023)</strong>
+            <strong>(Aug. 2023)</strong>
             <span id="small-caps">BankSnoop</span> and <span id="small-caps">XPorter</span> were accepted by MobiCom'23.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(January, 2023)</strong>
+            <strong>(Jan. 2023)</strong>
             One paper was accepted by IPSN'23.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(December, 2022)</strong>
+            <strong>(Dec. 2022)</strong>
             <span id="small-caps">WISERS</span> was accepted by IEEE S&P'23.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(July, 2022)</strong>
+            <strong>(Jul. 2022)</strong>
             <span id="small-caps">AppListener</span> was accepted by USENIX Security'23.
           </p>
 
           <p><img src="./taoni_files/glyphicons-336-pushpin.png" width="10">
-            <strong>(July, 2022)</strong>
+            <strong>(Jul. 2022)</strong>
             One paper was accepted by UbiComp'22.
           </p>
 
           <br>
-
-        <!-- <h3>Selected Publications (<a href="./publications.html">Full List</a>)</h3>
-      <br>
-        <ul reversed="">
-
-          <li>
-          <p><strong>Non-intrusive and Unconstrained Keystroke Inference in VR Platforms via Infrared Side Channel</strong><br>
-            <strong><u>Tao Ni</u></strong>, Yuefeng Du, Qingchuan Zhao, Cong Wang<br>
-
-          Proceedings of <em>the 32nd Network and Distributed System Security Symposium (<strong>NDSS</strong>)</em><br>
-            San Diego, CA, USA, February 2025.           
-            <br> Acceptance Rate: 211/1311 (16.1%)
-            <a href="https://www.ndss-symposium.org/wp-content/uploads/2025-96-paper.pdf" class="btn btn-primary btn-xs">PDF</a> 
-          </p>
-          </li>
-
-          <li>
-          <p><strong>Recovering Fingerprints from In-Display Fingerprint Sensors via Electromagnetic Side Channel</strong><br>
-             <strong><u>Tao Ni</u></strong>, Xiaokuan Zhang, Qingchuan Zhao<br>
-
-            Proceedings of <em>the 30th ACM Conference on Computer and Communications Security (<strong>CCS</strong>)</em><br>
-            Copenhagen, Denmark, November 2023.
-            <br> Acceptance Rate: 235/1222 (19.2%)         
-            <a href="./taoni_files/paper/ccs23_fplogger.pdf" class="btn btn-primary btn-xs">PDF</a>
-          </p>
-          </li>
-
-          <li>
-          <p><strong>Uncovering User Interactions on Smartphones via Contactless Wireless Charging Side Channels</strong><br>
-           <strong><u>Tao Ni</u></strong>, Xiaokuan Zhang, Chaoshun Zuo, Jianfeng Li, Zhenyu Yan, Wubing Wang, Weitao Xu, <br /> Xiapu Luo, Qingchuan Zhao<br>
-            Proceedings of <em> the 44th IEEE Symposium on Security and Privacy (<strong>IEEE S&amp;P</strong>)</em><br>
-    			San Francisco, CA, May 2023.
-          <br> Acceptance Rate: 195/1147 (17.0%)
-    			<a href="./taoni_files/paper/sp23_wireless_charging.pdf" class="btn btn-primary btn-xs">PDF</a> 
-    			</p>
-          </li>
-
-          <li>
-          <p><strong>Eavesdropping Mobile App Activity via Radio-Frequency Energy Harvesting</strong><br>
-            <strong><u>Tao Ni</u></strong>, Guohao Lan, Jia Wang, Qingchuan Zhao, Weitao Xu<br>
-            Proceedings of <em>the 32nd USENIX Security Symposium (<strong>USENIX Security</strong>)</em><br>
-            Anaheim, CA, USA, Auguest 2023.          
-            <br> Acceptance Rate: 422/1444 (29.2%)
-            <a href="./taoni_files/paper/sec23_energy_harvesting.pdf" class="btn btn-primary btn-xs">PDF</a> 
-            </p>
-          </li>
-
-          <li>
-          <p><strong>Exploiting Contactless Side Channels in Wireless Charging Power Banks for User Privacy Inference via Few-shot Learning</strong><br>
-            <strong><u>Tao Ni</u></strong>, Jianfeng Li, Xiaokuan Zhang, Chaoshun Zuo, Wubing Wang, <br /> Weitao Xu, Xiapu Luo, Qingchuan Zhao<br>
-            Proceedings of <em>the 29th Annual International Conference on Mobile Computing and Networking (<strong>MobiCom</strong>)</em><br>
-            Madrid, Spain, October 2023.            
-            <br> Acceptance Rate: 92/377 (24.4%)
-            <a href="./taoni_files/paper/mobicom23_banksnoop.pdf" class="btn btn-primary btn-xs">PDF</a> 
-            </p>
-          </li>
-
-          <li>
-          <p><strong>XPorter: A Study of the Multi-Port Charger Security on Privacy Leakage and Voice Injection</strong><br>
-            <strong><u>Tao Ni</u></strong>, Yongliang Chen, Weitao Xu, Lei Xue, Qingchuan Zhao<br>
-            Proceedings of <em>the 29th Annual International Conference on Mobile Computing and Networking (<strong>MobiCom</strong>)</em><br>
-            Madrid, Spain, October 2023.            
-            <br> Acceptance Rate: 92/377 (24.4%)
-            <a href="./taoni_files/paper/mobicom23_xporter.pdf" class="btn btn-primary btn-xs">PDF</a> 
-            </p>
-          </li>
-      </ul>
- -->
-     </div>
+     </div> -->
      </div>
      </div>
  	 </div>
