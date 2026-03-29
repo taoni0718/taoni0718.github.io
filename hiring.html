@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" href="./taoni_files/coai_logo.png">
     
   <link href="./taoni_files/bootstrap.css" rel="stylesheet" media="screen">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
   <!-- <link href="./taoni_files/non-responsive.css" rel="stylesheet"> -->
     
 <style type="text/css">
@@ -82,6 +83,162 @@ img { max-width: 100%; height: auto; }
 .navbar-brand img { height: auto !important; width: auto !important; max-height: 30px; max-width: 100%; }
 @media (max-width: 767px){
   .navbar-brand img { max-height: 22px !important; }
+}
+
+body {
+  font-family: "Libre Baskerville", Baskerville, "Baskerville Old Face",
+               "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.65;
+  color: #222;
+  padding-top: 70px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Paragraphs and lists */
+p, li {
+  font-size: 1em;
+  line-height: 1.65;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Libre Baskerville", Baskerville, Georgia, serif;
+  font-weight: 400;
+  color: #222;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 28px;
+  margin-top: 8px;
+  margin-bottom: 18px;
+}
+
+/* Navbar */
+.navbar {
+  min-height: 64px;
+}
+
+.navbar-default {
+  background-color: #fff;
+  border: none;
+  border-bottom: 1px solid #d9d9d9;
+  box-shadow: none;
+}
+
+@media (min-width: 768px) {
+  .navbar-default .navbar-nav > li > a {
+    font-family: "Libre Baskerville", Baskerville, Georgia, serif;
+    font-size: 17px;
+    color: #0f8f8c !important;
+    letter-spacing: 0.02em;
+    position: relative;
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    height: 64px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: transparent !important;
+  }
+
+  .navbar-default .navbar-nav > li > a::after {
+    bottom: 12px;
+  }
+
+  .navbar-brand {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+.navbar-default .navbar-nav > li > a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0f8f8c;
+  transition: width 0.28s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-default .navbar-nav > li > a:hover::after,
+.navbar-default .navbar-nav > li > a:focus::after {
+  width: 100%;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #0b6f6d !important;
+  text-decoration: none !important;
+  background: transparent !important;
+}
+
+/* active page */
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #0b6f6d !important;
+  background: transparent !important;
+}
+
+.navbar-default .navbar-nav > .active > a::after,
+.navbar-default .navbar-nav > .active > a:hover::after,
+.navbar-default .navbar-nav > .active > a:focus::after {
+  width: 100%;
+}
+
+/* Navbar brand */
+.navbar-brand {
+  font-family: "Libre Baskerville", Baskerville, Georgia, serif;
+  font-size: 20px;
+  color: #222 !important;
+  letter-spacing: 0.08em;
+  font-variant: small-caps;
+}
+
+/* Content spacing */
+.bs-component p {
+  margin-bottom: 18px;
+}
+
+/* Links */
+a {
+  color: #0f8f8c;
+}
+
+a:hover,
+a:focus {
+  color: #0b6f6d;
+  text-decoration: none;
+}
+
+/* Footer */
+footer p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  .navbar-default .navbar-nav > li > a {
+    font-size: 16px;
+  }
 }
 
 </style>
@@ -220,9 +377,9 @@ img { max-width: 100%; height: auto; }
 
           <p><strong>[For Saudi Students]</strong> Saudi recent graduates, senior undergraduates, or current master's students in related areas can apply for the <u><a href="https://cemse.kaust.edu.sa/internship-opportunities/saudi-summer-internship-ssi">Saudi Summer Internship (SSI) program</a></u> to participate a 6-10 week research project in our lab.</p>
 
-          <p><strong>[For Other Visiting Students]</strong> Students from other nationalities can apply the KAUST <u><a href="https://admissions.kaust.edu.sa/study/internships#costs">Visiting Student Research Program (VSRP) internship</a></u>. It is an exciting three-to-six-month research internship opportunity that provides research experience for highly qualified and motivated STEM students to work alongside leading faculty and researchers on impactful projects in our lab.</p>
+          <p><strong>[For Other Visiting Students]</strong> Students from other nationalities can apply the KAUST <u><a href="https://admissions.kaust.edu.sa/study/internships#costs">Visiting Student Research Program (VSRP) internship</a></u>. It is an exciting 3-6 months research internship opportunity that provides research experience for highly qualified and motivated STEM students to work alongside leading faculty and researchers on impactful projects in our lab.</p>
 
-          <p>More details about SSI and VSRP vacancies and applications in Summer 2026 will be released soon.</p>
+          <!-- <p>More details about SSI and VSRP vacancies and applications in Summer 2026.</p> -->
 
         </div>
       </div> 
