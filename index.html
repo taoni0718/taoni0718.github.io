@@ -433,8 +433,18 @@ footer p {
 
 <style>
 .news-container {
-  height: 280px;
-  overflow: auto;
+  max-height: 280px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+}
+
+@media (max-width: 767px) {
+  .news-container {
+    max-height: 45vh;
+  }
 }
 
 .news-item {
@@ -448,6 +458,21 @@ footer p {
 
 .news-text {
   display: block;
+}
+
+.scroll-box {
+  max-height: 350px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+}
+
+@media (max-width: 767px) {
+  .scroll-box {
+    max-height: 38vh;
+  }
 }
 </style>
  
@@ -570,7 +595,7 @@ footer p {
         <div class="bs-component">
           <h3>Teaching</h3>
 
-          <div style="height: 300px; overflow: auto;">
+          <div class="scroll-box">
             <p><img src="./taoni_files/education.png" width="10">
               <strong>Spring 2026</strong><br>
               CS221P Network Security: MEng Cybersecurity, Minister of Interior (MoI), Saudi Arabia.
