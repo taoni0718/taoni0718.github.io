@@ -1,0 +1,387 @@
+/* =============================================================================
+   site.css — shared styles for taoni0718.github.io
+   Sections:
+     1. Base & reset
+     2. Typography
+     3. Layout (container widths, utilities)
+     4. Navbar — desktop
+     5. Navbar — mobile
+     6. Profile card (sidebar)
+     7. News feed & scroll boxes
+     8. Footer
+   ============================================================================= */
+
+
+/* ---------- 1. Base & reset ------------------------------------------------ */
+
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+body {
+  font-family: Lora, Georgia, serif;
+  font-size: 18px;
+  line-height: 1.65;
+  color: #222;
+  padding-top: 70px;
+  padding-bottom: 40px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; height: auto; }
+
+
+/* ---------- 2. Typography -------------------------------------------------- */
+
+p, li {
+  font-size: 1em;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Lora, Georgia, serif;
+  font-weight: 400;
+  color: #222;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 28px;
+  margin-top: 8px;
+  margin-bottom: 18px;
+}
+
+a { color: #0f8f8c; }
+
+a:hover,
+a:focus {
+  color: #0b6f6d;
+  text-decoration: none;
+}
+
+.bs-component p { margin-bottom: 18px; }
+
+
+/* ---------- 3. Layout: container widths & utilities ------------------------ */
+
+/* Lock container to a narrow desktop width across breakpoints, overriding
+   Bootstrap's default 750/970/1170 ladder. */
+@media (min-width: 768px)  { .container { width: 700px !important; } }
+@media (min-width: 992px)  { .container { width: 920px !important; } }
+@media (min-width: 1200px) { .container { width: 920px !important; } }
+
+/* Vertical borders between columns (desktop only — stacking on phones makes
+   side borders look wrong, so they're cleared below). */
+.border-right { border-right: 1px solid #ddd; }
+.border-left  { border-left:  1px solid #ddd; }
+.borders {
+  border-left:  1px solid #ddd;
+  border-right: 1px solid #ddd;
+  margin: -1px;
+}
+
+.sidebar-nav           { padding: 9px 0; }
+.sidebar-section-title { font-size: 24px; margin-top: 0; margin-bottom: 14px; }
+
+/* Prevent horizontal scroll from long words/URLs. */
+.container, .bs-component, p, li {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+
+/* ---------- 4. Navbar — desktop -------------------------------------------- */
+
+.navbar { min-height: 64px; }
+
+.navbar-default {
+  background-color: #fff;
+  border: none;
+  border-bottom: 1px solid #d9d9d9;
+  box-shadow: none;
+}
+
+.navbar-brand {
+  font-family: Lora, Georgia, serif;
+  font-size: 20px;
+  color: #222 !important;
+  letter-spacing: 0.08em;
+  font-variant: small-caps;
+}
+
+.navbar-brand img {
+  height: auto !important;
+  width: auto !important;
+  max-height: 30px;
+  max-width: 100%;
+}
+
+/* Animated underline on hover/active */
+.navbar-default .navbar-nav > li > a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0f8f8c;
+  transition: width 0.28s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-default .navbar-nav > li > a:hover::after,
+.navbar-default .navbar-nav > li > a:focus::after,
+.navbar-default .navbar-nav > .active > a::after,
+.navbar-default .navbar-nav > .active > a:hover::after,
+.navbar-default .navbar-nav > .active > a:focus::after {
+  width: 100%;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #0b6f6d !important;
+  text-decoration: none !important;
+  background: transparent !important;
+}
+
+@media (min-width: 768px) {
+  .navbar-brand {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .navbar-default .navbar-nav > li > a {
+    font-family: Lora, Georgia, serif;
+    font-size: 17px;
+    color: #0f8f8c !important;
+    letter-spacing: 0.02em;
+    position: relative;
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    height: 64px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: transparent !important;
+  }
+
+  .navbar-default .navbar-nav > li > a::after { bottom: 12px; }
+}
+
+
+/* ---------- 5. Navbar — mobile (and small-screen tweaks) ------------------- */
+
+@media (max-width: 767px) {
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h3 { font-size: 24px; }
+
+  /* Stacked rows need a little breathing room */
+  .row + .row { margin-top: 15px; }
+
+  /* Clear vertical column borders when stacking */
+  .border-left  { border-left:  none !important; }
+  .border-right { border-right: none !important; }
+
+  .navbar        { min-height: 56px; }
+  .navbar-header { min-height: 56px; }
+
+  .navbar-brand {
+    height: 56px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-brand img {
+    max-height: 22px !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .navbar-toggle {
+    margin-top: 11px;
+    margin-right: 15px;
+    margin-bottom: 11px;
+  }
+
+  .navbar-collapse {
+    border-top: none;
+    box-shadow: none;
+    background: #fff;
+  }
+
+  .navbar-nav        { float: none !important; margin: 0; }
+  .navbar-nav > li   { float: none; }
+
+  .navbar-default .navbar-nav > li > a {
+    display: block;
+    height: auto;
+    padding: 12px 15px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #0f8f8c !important;
+    background-color: #fff !important;
+  }
+
+  .navbar-default .navbar-nav > li > a::after { display: none; }
+
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus,
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+    color: #0b6f6d !important;
+    background-color: #fff !important;
+  }
+}
+
+
+/* ---------- 6. Profile card (sidebar) -------------------------------------- */
+
+.profile-card {
+  background: #f7f7f7;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+  padding: 18px 18px 16px 18px;
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.profile-card img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 18px;
+  display: block;
+  margin: 0 auto 16px auto;
+}
+
+.profile-card-name {
+  font-size: 20px;
+  line-height: 1.25;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.profile-card-title,
+.profile-card-affiliation,
+.profile-card-email,
+.profile-card-office {
+  font-size: 15px;
+  line-height: 1.55;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.profile-card-links {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.profile-card-links a {
+  color: #0f8f8c;
+  text-decoration: none;
+}
+
+.profile-card-links a:hover,
+.profile-card-links a:focus {
+  color: #0b6f6d;
+  text-decoration: none;
+}
+
+.profile-icon {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #0f8f8c;
+  border-radius: 8px;
+  background: #fff;
+  color: #0f8f8c !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.profile-icon iconify-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.profile-icon:hover,
+.profile-icon:focus {
+  background: #0f8f8c;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+@media (max-width: 767px) {
+  .profile-card {
+    margin-top: 10px;
+    padding: 16px;
+  }
+
+  .profile-card img     { max-width: 200px; }
+  .profile-card-name    { font-size: 18px; }
+
+  .profile-card-title,
+  .profile-card-affiliation,
+  .profile-card-email,
+  .profile-card-office,
+  .profile-card-links {
+    font-size: 14px;
+  }
+}
+
+
+/* ---------- 7. News feed & scroll boxes ------------------------------------ */
+
+.news-container,
+.scroll-box {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+}
+
+.news-container { max-height: 270px; }
+.scroll-box     { max-height: 350px; }
+
+.news-item {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.news-item:last-child { margin-bottom: 0; }
+
+.news-text { display: block; }
+
+@media (max-width: 767px) {
+  .news-container { max-height: 45vh; }
+  .scroll-box     { max-height: 38vh; }
+}
+
+
+/* ---------- 8. Footer ------------------------------------------------------ */
+
+footer p {
+  font-size: 14px;
+  color: #777;
+}
