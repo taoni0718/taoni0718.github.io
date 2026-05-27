@@ -361,7 +361,7 @@ a:focus {
   touch-action: pan-y;
 }
 
-.news-container { max-height: 270px; }
+.news-container { max-height: 300px; }
 .scroll-box     { max-height: 350px; }
 
 .news-item {
